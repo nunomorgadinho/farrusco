@@ -1,0 +1,5 @@
+#Sun Mar 13 02:22:09 WET 2011
+addedNewWizardActions1.2_org.eclipse.jdt.ui.JavaPerspective=com.google.gdt.eclipse.suite.wizards.newProjectWizard|com.google.gwt.eclipse.core.newModuleWizard|com.google.gwt.eclipse.core.newHostPageWizard|com.google.gwt.eclipse.core.newEntryPointWizard|com.google.gwt.eclipse.core.newClientBundleWizard|com.google.gwt.eclipse.core.newUiBinderWizard
+versionForLastForcedRebuild_DriveFarrusco=1.4.0.v201010280047
+SdkRegistrants_1290696857790=com.google.appengine.eclipse.sdkbundle.1.3.8_1.3.8.v201010161055,com.google.gwt.eclipse.sdkbundle.2.1.0_2.1.0.v201010280047
+eclipse.preferences.version=1

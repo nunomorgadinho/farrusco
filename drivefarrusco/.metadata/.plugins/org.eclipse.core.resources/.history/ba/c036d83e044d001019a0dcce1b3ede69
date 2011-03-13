@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hello App Engine</title>
+  </head>
+
+  <body>
+	
+		<div class="streaming" id="streaming">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="296" id="utv949372">
+				<param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=7502326&amp;v3=1"/>
+				<param name="allowfullscreen" value="true"/>
+				<param name="allowscriptaccess" value="always"/>
+				<param name="movie" value="http://www.ustream.tv/flash/viewer.swf"/>
+				<embed flashvars="autoplay=false&amp;brand=embed&amp;cid=7502326&amp;v3=1" width="680" height="396" allowfullscreen="true" allowscriptaccess="always" id="utv949372" name="utv_n_951471" src="http://www.ustream.tv/flash/viewer.swf" type="application/x-shockwave-flash" />
+				</object><br />
+				<a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank"></a>
+			</div>
+			
+				<br/>
+			<div class="controlarea" id="controlarea" style="margin-left: auto; margin-right: auto">
+
+				<input type="button" value="Start Driving!" name="control" id="control"></input>
+				<h6>Keep the focus on the start button</h6>
+				Debug: <input type="text" id="debug" size="1" disabled value="" ></input>
+
+			</div> 
+			
+			<script type="text/javascript">
+
+  onload = function(){
+
+	  field = document.getElementById('control')
+	  field.onkeydown = keyhit
+	  field.focus()
+  }
+   
+  function keyhit(e)
+  {
+	  thisKey = e ? e.which : window.event.keyCode
+
+	  //alert(thisKey);
+	  
+	  switch (thisKey) {
+	  	case 38: key = 'UP'
+	  	send_to('F');
+	  	break
+	  	case 40: key = 'DOWN'
+	  	send_to('B');
+	  	break
+	  	case 39: key = 'RIGHT'
+	  	send_to('R');
+		break
+	  	case 37: key = 'LEFT'
+	  	send_to('L');
+		break
+	  	case 67: key = 'C'
+		break
+	  	case 70: key = 'F'
+		break
+	  	case 83: key = 'S'
+		send_to('S');
+	  	default: key = null
+	  }
+  }
+
+  function send_to(cmd)
+  {
+	  debug = document.getElementById('debug');
+	  debug.value = cmd;
+	  
+	  var data = {
+	 	action: "my_special_action",
+		cmd: cmd,
+		results_div_id: "results_div"
+	  };
+
+	  jQuery.post("http://drivefarrusco.appspot.com/drivefarrusco/", data, function(response) {
+		//alert('Got this from the server: ' + response);
+  	  });
+  }
+  
+</script>
+</body>
+</html>

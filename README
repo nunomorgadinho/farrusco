@@ -6,4 +6,6 @@ processing_RC_1 -> codigo em processing para capturar o video e enviar comandos 
 
 Farrusco -> projecto em Eclipse e Java para capturar o video e enviar comandos ao Farrusco (server)
 
+drivefarrusco -> app em appengine para controlar o Farrusco pela Web (client)
+
 
