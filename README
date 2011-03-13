@@ -10,4 +10,4 @@ drivefarrusco -> app em appengine para controlar o Farrusco pela Web (client)
 
 DarkZen -> a WordPress theme with a page template to display the Farrusco video stream and interface (client)
 
-
+farrusco-plugin -> a WordPress plugin with a webservice to receive requests to control Farrusco (server)
