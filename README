@@ -8,4 +8,6 @@ Farrusco -> projecto em Eclipse e Java para capturar o video e enviar comandos a
 
 drivefarrusco -> app em appengine para controlar o Farrusco pela Web (client)
 
+DarkZen -> a WordPress theme with a page template to display the Farrusco video stream and interface (client)
+
 
