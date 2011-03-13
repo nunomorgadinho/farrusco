@@ -4,4 +4,6 @@ arduino_RC_1 -> codigo que vai para dentro do Farrusco
 
 processing_RC_1 -> codigo em processing para capturar o video e enviar comandos ao Farrusco
 
+Farrusco -> projecto em Eclipse e Java para capturar o video e enviar comandos ao Farrusco (server)
+
 
